@@ -1,0 +1,50 @@
+.shader {
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  opacity: 0;
+  position: relative;
+  background-color: #608ba8;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 2;
+  &-heading {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 50px;
+  }
+  &-text {
+    font-size: 18px;
+    color: bisque;
+  }
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  border: 0;
+  background: url('../img/cross.png'), #608ba8;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &:hover {
+    cursor: pointer;
+  }
+}

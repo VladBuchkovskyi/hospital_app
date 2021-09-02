@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Zilla+Slab:wght@400;700&display=swap');
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Zilla Slab', serif;
+body {
+  height: 100vh;
+  background-image: url('../img/bg.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 80vw;
+  margin: auto;
+}
+.wrapper {
+  text-align: center;
+}
+.logo {
+  width: 350px;
+}
+.button-wrapper {
+  margin-top: 20px;
+}
+.log-in-button {
+  padding: 10px 20px;
+  font-size: 22px;
+  font-family: 'Inconsolata', monospace;
+  background-color: #004d80;
+  color: #fff;
+  border: 2px solid #2e4573;
+  border-radius: 5px;
+  &:hover {
+    background-color: #0272bd;
+  }
+  &:active {
+    background-color: #01253d;
+  }
+}
+.start-text {
+  color: #004d80;
+  font-family: 'Inconsolata', monospace;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 120px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 300px;
+  }
+  .start-text {
+    margin-top: 200px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1200px) {
+  .logo {
+    width: 350px;
+  }
+}
