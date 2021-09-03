@@ -8,6 +8,7 @@ export default class Input {
     this.input.setAttribute('id', id);
     this.input.setAttribute('type', type);
     this.input.setAttribute('placeholder', placeholder);
+    this.input.setAttribute('required', '');
     this.label = document.createElement('label');
     this.label.setAttribute('for', id);
     this.label.innerText = label;

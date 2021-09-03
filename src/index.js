@@ -1,6 +1,7 @@
 import '@scss/reset.css';
 import '@scss/main.scss';
 import '@scss/modal.scss';
+import '@scss/autorization_form.scss';
 import Modal from '@js/modalClass.js';
 import { logInForm } from '@js/autorization_form.js';
 

@@ -4,7 +4,7 @@ export default class Modal {
     this.timeout = 800;
     this.parent = document.body;
     let geometry = [];
-    if (size === 'small') geometry = [400, 200];
+    if (size === 'small') geometry = [270, 300];
     if (size === 'big') geometry = [500, 600];
 
     this.shader = document.createElement('div');

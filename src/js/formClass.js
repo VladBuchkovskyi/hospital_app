@@ -5,6 +5,7 @@ export default class Form {
 
   static createFormObj(children) {
     this.form = document.createElement('form');
+    this.form.classList.add('form');
     this.children = children;
     this.children.forEach((child) => {
       this.form.appendChild(child['tag']);

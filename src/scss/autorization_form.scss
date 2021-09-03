@@ -1,0 +1,36 @@
+.form {
+  font-family: 'Zilla Slab', serif;
+  font-size: 18px;
+  color: rgb(54, 53, 65);
+  text-align: center;
+  margin-top: 25px;
+  & p {
+    margin: 30px auto;
+  }
+  & label {
+    display: block;
+  }
+  & input {
+    margin-top: 10px;
+    width: 230px;
+    font-size: 16px;
+    font-family: 'Zilla Slab', serif;
+    border: 2px solid rgb(54, 53, 65);
+    text-align: center;
+    border-radius: 5px;
+  }
+  & button {
+    font-family: 'Zilla Slab', serif;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(54, 53, 65);
+    background-color: rgb(5, 104, 13);
+    color: #ffe4c4;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+      background-color: #3d9144;
+    }
+  }
+}
