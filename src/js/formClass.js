@@ -1,13 +1,15 @@
 export default class Form {
-  constructor(parent, children) {
-    this.parent = parent.modalContent;
+  constructor(children) {
+    this.tag = Form.createFormObj(children);
+  }
+
+  static createFormObj(children) {
     this.form = document.createElement('form');
     this.children = children;
-    console.log(children);
     this.children.forEach((child) => {
-      this.parent.appendChild(Object.values(child)[0]);
+      this.form.appendChild(child['tag']);
     });
 
-    this.parent.appendChild(this.form);
+    return this.form;
   }
 }

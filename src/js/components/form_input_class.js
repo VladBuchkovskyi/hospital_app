@@ -1,9 +1,9 @@
 export default class Input {
   constructor(type, id, placeholder, label) {
-    this.tag = Input.inputObj(type, id, placeholder, label);
+    this.tag = Input.createInputObj(type, id, placeholder, label);
   }
 
-  static inputObj(type, id, placeholder, label) {
+  static createInputObj(type, id, placeholder, label) {
     this.input = document.createElement('input');
     this.input.setAttribute('id', id);
     this.input.setAttribute('type', type);

@@ -1,8 +1,8 @@
 export default class Modal {
-  constructor(parentTag, size, heading) {
+  constructor(size, heading, content) {
     this.unlock = true;
     this.timeout = 800;
-    this.parent = document.querySelector(`.${parentTag}`);
+    this.parent = document.body;
     let geometry = [];
     if (size === 'small') geometry = [400, 200];
     if (size === 'big') geometry = [500, 600];
@@ -31,6 +31,8 @@ export default class Modal {
     this.closeBtn.classList.add('close-modal');
     this.closeBtn.setAttribute('type', 'submit');
     this.modalContent.appendChild(this.closeBtn);
+
+    this.modalContent.appendChild(content);
 
     this.parent.appendChild(this.shader);
     this.shader.style.transition = 'all 0.8s ease 0s';
