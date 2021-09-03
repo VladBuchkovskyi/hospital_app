@@ -6,9 +6,9 @@
 import '@scss/reset.css';
 import '@scss/main.scss';
 import '@scss/modal.scss';
-import Modal from '@js/modaClass.js';
+import Modal from '@js/modalClass.js';
 
-const test = new Modal('wrapper', 'small');
+const test = new Modal('wrapper', 'small', 'Log In');
 const btn = document.querySelector('.log-in-button');
 btn.addEventListener('click', (e) => {
   e.preventDefault();

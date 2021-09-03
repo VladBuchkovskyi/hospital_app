@@ -1,10 +1,10 @@
 export default class Modal {
-  constructor(parentTag, size) {
+  constructor(parentTag, size, heading) {
     this.unlock = true;
     this.timeout = 800;
     this.parent = document.querySelector(`.${parentTag}`);
     let geometry = [];
-    if (size === 'small') geometry = [400, 150];
+    if (size === 'small') geometry = [400, 200];
     if (size === 'big') geometry = [500, 600];
 
     this.shader = document.createElement('div');
@@ -21,6 +21,11 @@ export default class Modal {
     this.modalContent = document.createElement('div');
     this.modalContent.classList.add('modal-content');
     this.modal.appendChild(this.modalContent);
+
+    this.heading = document.createElement('h3');
+    this.heading.classList.add('modal__heading');
+    this.heading.innerText = heading;
+    this.modalContent.appendChild(this.heading);
 
     this.closeBtn = document.createElement('button');
     this.closeBtn.classList.add('close-modal');

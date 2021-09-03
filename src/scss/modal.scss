@@ -22,14 +22,11 @@
   border-radius: 5px;
   padding: 10px;
   z-index: 2;
-  &-heading {
+  &__heading {
     font-size: 22px;
-    color: #fff;
-    margin-top: 50px;
-  }
-  &-text {
-    font-size: 18px;
     color: bisque;
+    margin-top: 30px;
+    text-align: center;
   }
 }
 .close-modal {
