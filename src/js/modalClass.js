@@ -5,7 +5,7 @@ export default class Modal {
     this.parent = document.body;
     let geometry = [];
     if (size === 'small') geometry = [270, 300];
-    if (size === 'big') geometry = [500, 600];
+    if (size === 'big') geometry = [550, 700];
 
     this.shader = document.createElement('div');
     this.shader.classList.add('shader');
@@ -39,7 +39,12 @@ export default class Modal {
 
     document.addEventListener('click', (event) => {
       event.preventDefault();
-      this.modalClose(event);
+      if (
+        event.target == this.shader ||
+        (event.target.closest('button') == this.closeBtn && !this.unlock)
+      ) {
+        this.modalClose();
+      }
     });
   }
 
@@ -53,18 +58,12 @@ export default class Modal {
       document.body.style.overflow = 'hidden';
     }
   }
-  modalClose(event) {
-    console.log(event);
-    if (
-      event.target == this.shader ||
-      (event.target.closest('button') == this.closeBtn && !this.unlock)
-    ) {
-      this.unlock = true;
-      this.shader.style.opacity = 0;
-      this.shader.style.zIndex = -1;
-      this.modal.style.opacity = 0;
-      this.modal.style.transform = 'translate(0px, -100%)';
-      document.body.style.overflow = 'visible';
-    }
+  modalClose() {
+    this.unlock = true;
+    this.shader.style.opacity = 0;
+    this.shader.style.zIndex = -1;
+    this.modal.style.opacity = 0;
+    this.modal.style.transform = 'translate(0px, -100%)';
+    document.body.style.overflow = 'visible';
   }
 }

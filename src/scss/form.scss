@@ -1,6 +1,6 @@
 .form {
   font-family: 'Zilla Slab', serif;
-  font-size: 18px;
+  font-size: 17px;
   color: rgb(54, 53, 65);
   text-align: center;
   margin-top: 25px;
@@ -17,6 +17,18 @@
     font-family: 'Zilla Slab', serif;
     border: 2px solid rgb(54, 53, 65);
     text-align: center;
+    border-radius: 5px;
+  }
+  & textarea {
+    font-size: 16px;
+    font-family: 'Zilla Slab', serif;
+    border: 2px solid rgb(54, 53, 65);
+    border-radius: 5px;
+  }
+  & select {
+    font-size: 14px;
+    font-family: 'Zilla Slab', serif;
+    border: 2px solid rgb(54, 53, 65);
     border-radius: 5px;
   }
   & button {
