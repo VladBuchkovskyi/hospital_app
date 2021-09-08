@@ -1,3 +1,19 @@
+.form#added_form {
+  font-size: 14px;
+  & p {
+    margin: 10px auto;
+  }
+  & input {
+    font-size: 12px;
+  }
+  & textarea {
+    font-size: 12px;
+  }
+  & select {
+    font-size: 12px;
+  }
+}
+
 .form {
   font-family: 'Zilla Slab', serif;
   font-size: 17px;
@@ -11,7 +27,7 @@
     display: block;
   }
   & input {
-    margin-top: 10px;
+    // margin-top: 10px;
     width: 230px;
     font-size: 16px;
     font-family: 'Zilla Slab', serif;
