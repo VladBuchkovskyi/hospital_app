@@ -38,7 +38,7 @@ export default class Modal {
     this.shader.style.transition = 'all 0.8s ease 0s';
 
     document.addEventListener('click', (event) => {
-      event.preventDefault();
+      // event.preventDefault();
       if (
         event.target == this.shader ||
         (event.target.closest('button') == this.closeBtn && !this.unlock)

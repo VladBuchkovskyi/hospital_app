@@ -14,7 +14,7 @@ console.log(autorizationModal);
 
 const logInButton = document.querySelector('.log-in-button');
 logInButton.addEventListener('click', (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   autorizationModal.modalOpen();
 });
 

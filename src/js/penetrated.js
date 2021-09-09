@@ -7,6 +7,7 @@ import {
 } from '@js/visitClass';
 import createCard from '@js/visit_card.js';
 import { deleteCard } from '@js/delete_card.js';
+import filterCards from '@js/filter/filter.js';
 
 export default function penetrated(token) {
   const visitModal = new Modal(
@@ -18,7 +19,7 @@ export default function penetrated(token) {
 
   const createVisitBtn = document.querySelector('.create-visit-button');
   createVisitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     visitModal.modalOpen();
     let form = visitModal.modalContent.querySelector('.form');
     const visitForm = new VisitTherapist().createForm();
@@ -60,4 +61,6 @@ export default function penetrated(token) {
       deleteCard(cardForDelete, token);
     }
   });
+
+  filterCards(token);
 }

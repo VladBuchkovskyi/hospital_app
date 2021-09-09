@@ -6,6 +6,7 @@ export default function createCard(modal, token) {
   console.log('create card function launched');
   const createCardBtn = document.querySelector('#create-visit');
   createCardBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     let formElements = event.target.closest('form').elements;
     let isEmpty = 0;
     for (const elem of formElements) {
