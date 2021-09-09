@@ -5,8 +5,10 @@ import {
   VisitDentist,
   VisitCardiologist,
 } from '@js/visitClass';
+import createCard from '@js/visit_card.js';
+import { deleteCard } from '@js/delete_card.js';
 
-export default function penetrated() {
+export default function penetrated(token) {
   const visitModal = new Modal(
     'big',
     'Create a visit to the Doctor',
@@ -18,6 +20,10 @@ export default function penetrated() {
   createVisitBtn.addEventListener('click', (e) => {
     e.preventDefault();
     visitModal.modalOpen();
+    let form = visitModal.modalContent.querySelector('.form');
+    const visitForm = new VisitTherapist().createForm();
+    form.appendChild(visitForm);
+    createCard(visitModal, token);
   });
 
   document
@@ -39,5 +45,19 @@ export default function penetrated() {
         const visitForm = new VisitCardiologist().createForm();
         form.appendChild(visitForm);
       }
+      createCard(visitModal, token);
     });
+
+  // const allCards = document.querySelector('.visit-cards-row');
+  // allCards.addEventListener('click', onCardClickDelete);
+  const allCards = document.querySelector('.visit-cards-row');
+  allCards.addEventListener('click', (event) => {
+    console.log(event.target);
+    const isButtonClicked = event.target.className === 'card-button-delete';
+    console.log(isButtonClicked);
+    if (isButtonClicked) {
+      const cardForDelete = event.target.closest('.card');
+      deleteCard(cardForDelete, token);
+    }
+  });
 }

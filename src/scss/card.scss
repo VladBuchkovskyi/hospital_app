@@ -1,0 +1,72 @@
+.card {
+  text-align: center;
+  width: 250px;
+  height: 150px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #f7e1b2;
+  font-family: 'Zilla Slab', serif;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  &-urgency {
+    color: #000;
+    height: 20px;
+  }
+  &-body {
+    padding: 15px 10px 10px;
+  }
+  &-title {
+    font-size: 18px;
+    color: #212e3f;
+    margin-bottom: 10px;
+  }
+  &-subtitle {
+    font-size: 16px;
+    color: #161f2b;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  &-buttons {
+    margin-top: 25px;
+  }
+  &-button {
+    &-show {
+      font-size: 12px;
+      padding: 5px;
+      color: #fff;
+      background-color: #139113;
+      border: 1px solid #0c630c;
+      border-radius: 3px;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        color: #000;
+        background-color: #4dac4d;
+      }
+    }
+    &-delete {
+      font-size: 12px;
+      padding: 5px;
+      color: #fff;
+      background-color: #b11d1d;
+      border: 1px solid #811010;
+      border-radius: 3px;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        color: #000;
+        background-color: #c46565;
+      }
+    }
+  }
+}
+.normal-color {
+  background-color: #139113;
+}
+.priority-color {
+  background-color: #eb9d27;
+}
+.emergency-color {
+  background-color: #df3232;
+}

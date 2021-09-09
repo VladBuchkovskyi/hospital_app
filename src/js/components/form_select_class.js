@@ -10,10 +10,6 @@ export default class Select {
     for (let i = 0; i < options.length; i++) {
       let option = document.createElement('option');
       option.setAttribute('value', options[i].toLowerCase());
-      if (i === 0) {
-        option.setAttribute('disabled', true);
-        option.setAttribute('selected', true);
-      }
       option.innerText = options[i];
       this.select.appendChild(option);
     }

@@ -5,7 +5,7 @@ export default class Modal {
     this.parent = document.body;
     let geometry = [];
     if (size === 'small') geometry = [270, 300];
-    if (size === 'big') geometry = [550, 700];
+    if (size === 'big') geometry = [550, 650];
 
     this.shader = document.createElement('div');
     this.shader.classList.add('shader');

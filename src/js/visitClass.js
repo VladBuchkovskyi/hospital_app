@@ -5,7 +5,7 @@ import TextArea from '@js/components/form_textarea_class';
 
 export class Visit {
   constructor() {
-    this.form = document.createElement('form');
+    this.form = document.createElement('div');
     this.form.classList.add('form');
     this.form.setAttribute('id', 'added_form');
     this.goal = new Input(
@@ -17,13 +17,12 @@ export class Visit {
     this.shortInfo = new TextArea(
       'short_info',
       'short_info',
-      'Enter short information about vist',
+      'Enter short information about visit',
       'Short Info is going...',
-      '4',
+      '2',
       '50'
     )['tag'];
     this.urgency = new Select('urgency', 'urgency', 'Enter the urgency:', [
-      'Urgency:',
       'normal',
       'priority',
       'emergency',

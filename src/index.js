@@ -2,10 +2,12 @@ import '@scss/reset.css';
 import '@scss/main.scss';
 import '@scss/modal.scss';
 import '@scss/form.scss';
+import '@scss/card.scss';
 import Modal from '@js/modalClass.js';
 import { logInForm } from '@js/autorization_form.js';
 import handleForSubmit from '@/js/login_response';
 import penetrated from '@js/penetrated.js';
+import { renderCards } from '@js/render_cards.js';
 
 const autorizationModal = new Modal('small', 'Log In', logInForm['tag']);
 console.log(autorizationModal);
@@ -35,11 +37,14 @@ form.addEventListener('click', (event) => {
         console.log(allItems);
         if (!allItems.length) {
           startText.innerText = 'No items have been added';
+        } else {
+          startText.remove();
+          renderCards(allItems);
         }
         logInButton.remove();
         const createVisitBtn = `<button type="submit" class="create-visit-button">Create Visit</button>`;
         document.querySelector('.button-wrapper').innerHTML = createVisitBtn;
-        penetrated();
+        penetrated(token);
       });
     }
   });
