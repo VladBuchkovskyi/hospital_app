@@ -4,7 +4,6 @@ import { renderCards } from '@js/render_cards.js';
 
 export default function filterCards(token) {
   const searchField = document.querySelector('#search');
-  const stateCheckbox = document.querySelector('#state');
   // Filters;
   let searchInput = '';
   const urgencyChecked = new Set();
