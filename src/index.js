@@ -4,6 +4,7 @@ import '@scss/modal.scss';
 import '@scss/form.scss';
 import '@scss/card.scss';
 import '@scss/filter.scss';
+import '@scss/patient.scss';
 import Modal from '@js/modalClass.js';
 import { logInForm } from '@js/autorization_form.js';
 import handleForSubmit from '@/js/login_response';

@@ -52,7 +52,7 @@ export default class Modal {
     if (this.modal && this.unlock) {
       this.unlock = false;
       this.shader.style.opacity = 1;
-      this.shader.style.zIndex = 1;
+      this.shader.style.zIndex = 20;
       this.modal.style.opacity = 1;
       this.modal.style.transform = 'translate(0px, 0px)';
       document.body.style.overflow = 'hidden';

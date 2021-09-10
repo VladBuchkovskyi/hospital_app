@@ -8,6 +8,7 @@ import {
 import createCard from '@js/visit_card.js';
 import { deleteCard } from '@js/delete_card.js';
 import filterCards from '@js/filter/filter.js';
+import { showMore } from '@js/show_more.js';
 
 export default function penetrated(token) {
   const visitModal = new Modal(
@@ -54,11 +55,18 @@ export default function penetrated(token) {
   const allCards = document.querySelector('.visit-cards-row');
   allCards.addEventListener('click', (event) => {
     console.log(event.target);
-    const isButtonClicked = event.target.className === 'card-button-delete';
-    console.log(isButtonClicked);
-    if (isButtonClicked) {
+    const isButtonDeleteClicked =
+      event.target.className === 'card-button-delete';
+    const isButtonShowClicked = event.target.className === 'card-button-show';
+    console.log(isButtonDeleteClicked);
+    console.log(isButtonShowClicked);
+    if (isButtonDeleteClicked) {
       const cardForDelete = event.target.closest('.card');
       deleteCard(cardForDelete, token);
+    }
+    if (isButtonShowClicked) {
+      const cardForShowing = event.target.closest('.card');
+      showMore(cardForShowing, token);
     }
   });
 
